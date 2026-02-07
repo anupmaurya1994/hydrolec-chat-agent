@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristine Chat Demo</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>web page</h1>
+    <p>Any web page built on any frontend framework</p>
+
+    <!-- 1. Load the script -->
+    <script type="module" src="./pristine-chat.js"></script>
+
+    <!-- 2. Initialize -->
+
+<script>
+        window.addEventListener('load', () => {
+             window.PristineChat.init({
+                 apiBaseUrl: 'https://dev.pristinedata.ai/api/hydrolecagentKim',
+                 primaryColor: '#26af50',
+                 backgroundColor: '#e7f7ea',
+                 textColor: '#000000', // Dark text as requested
+                 headerTitle: 'Agent Kim',
+                 headerSubtitle:"Your AI Copilot",
+                 typingText: 'Agent Kim Typing...',
+                 welcomeMessage: 'Welcome to the Agent Kim! Ask me anything.',
+                 theme: 'light',
+                 position: 'bottom-right',
+                 autoOpenDelay: 5000, // 5 seconds delay
+                 width:400,
+                 sessionTimeout:1, // Hour
+                 launcherText:'Need Assistant?'
+             });
+        });
+    </script>
+</body>
+
+</html>

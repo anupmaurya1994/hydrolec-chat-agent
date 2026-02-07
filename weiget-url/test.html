@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristine Chat Test</title>
+</head>
+<body >
+<p>Sample HTML page dont have any controls</p>
+   
+ <!-- 1. Load the script we have host this in our CDN -->
+    <script type="module" src="../frontend/dist/pristine-chat.js"></script>
+
+    <!-- 2. Initialize with Custom Configuration -->
+    <script>
+        window.addEventListener('load', () => {
+            window.PristineChat.init({
+                // API Backend URL
+                apiBaseUrl: 'https://dev.pristinedata.ai/api/hydrolecagentKim',
+                // UI Customization
+                primaryColor: '#212121',       // Dark theme example
+                headerTitle: 'Hydrolec',
+                headerSubtitle: 'AI Assistant',
+                welcomeMessage: 'Hi there! I am the Hydrolec AI. How can I help you today?',
+                typingText: 'Hydrolec AI is thinking...',
+                // Widget Position
+                position: 'bottom-right',
+                theme: 'light'
+            });
+            // Open automatically for demo purposes
+            setTimeout(() => {
+                window.PristineChat.open();
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
