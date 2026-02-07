@@ -1,6 +1,0 @@
-fastapi
-uvicorn[standard]
-requests
-twilio
-python-dotenv
-python-multipart
