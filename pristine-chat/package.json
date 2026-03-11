@@ -1,0 +1,21 @@
+{
+  "name": "pristine-chat-widget",
+  "version": "1.0.0",
+  "description": "Lit-based Chat Widget",
+  "main": "dist/pristine-chat.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.1.0",
+    "dompurify": "^3.0.6",
+    "marked": "^11.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}
