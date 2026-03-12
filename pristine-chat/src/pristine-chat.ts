@@ -238,7 +238,7 @@ export class PristineChat extends LitElement {
         const decoder = new TextDecoder();
         let assistantMessage: any = '';
 
-
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
         const MARKER = "followup_question";
         let mode: "message" | "followup" = "message";
 
@@ -291,6 +291,12 @@ export class PristineChat extends LitElement {
                 }
             }
         }
+
+
+        this.messages[msgIndex].content = assistantMessage.replace(urlRegex, (url: any) => {
+            const fileName = url.split('/').pop();
+            return `<a href="${url}" target="_blank">${fileName}</a>`;
+        });
 
         // // Final normalization
         const { followups } = this.normalizeAssistantResponse(assistantMessage);
